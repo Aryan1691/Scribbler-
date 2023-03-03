@@ -97,5 +97,5 @@ let but = document.getElementById('All');
 but.addEventListener('click',newTab);
 
 function newTab(){
-    window.location.href="/html/postslist.html";
+    window.location.href="./html/postslist.html";
 }
