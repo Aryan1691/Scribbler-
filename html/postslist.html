@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scribbler</title>
+    <link rel="stylesheet" href="../style/common.css">
+    <link rel="stylesheet" href="../style/postslist.css" />
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script> -->
+    <link href="https://fonts.googleapis.com/css?family=Montez&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body style="background-color: #ffeedd;">
+    <div class="header">
+        <input class="topButtons" id="modalBTN" type="button" value="Sign Up">
+        <input class="topButtons" id="modalBTN2" type="button" value="Sign In">
+        <a id="pageTitle" class="logo-title">ScriBBler</a>
+        <p class="middleText">Explore, Imagine, Create</p>
+    </div> 
+   <!--Modul for Sign up-->
+    <div id="simpleModal" class="modal">
+        <div class="modal-content">
+            <span id="closeBtn">&times;</span>
+            <p  id="content">Get started</p>
+            <hr>
+            <form>
+                <label for="">Name</label>
+                <input type="text" placeholder="Enter Your name" id="name" required>
+                <label> Username</label>
+                <input type="text" placeholder="Enter your username" id="username" required>
+                <label> Password</label>
+                <input type="password" placeholder="Enter your password" id="password" required>
+                <label>confirm password</label>
+                <input type="text" placeholder="Enter your username" id="check" required>
+                <button style="position: relative;left: 0%;top: 10%;width: 221%;" onclick="fetchData(name,username,password,check)">Sign Up</button>
+              </form>
+              
+             
+        </div>
+    </div>
+    <!--Modul for Sign in-->
+    <div id="simpleModal2" class="modal">
+        <div class="modal-content2">
+            <span id="closeBtn2">&times;</span>
+            <p  id="content">Welcome Back!</p>
+            <hr>
+            <form>
+       
+                <label> Username</label>
+                <input type="text" placeholder="Enter your username" id="username1" required>
+                <label> Password</label>
+                <input type="password" placeholder="Enter your password" id="password1" required>
+                <button style="position: relative; left: 0%;top: 10%;width: 221%;" onclick="fetchData2(username1,password1)">Sign In</button>
+            </form>
+            
+                <h4>Not a member?</h4>
+                <a href="#simpleModal" id="anchor1">Sign up</a>
+        </div>
+    </div>
+
+    <!--list of post-->
+    <!--post1-->
+<div id="container">
+<div id="post1"> 
+<header id="author1" style=" font-size: 20px;">Srishti Gupta</header>
+<div id="data1"> 
+<span id="heading1"  style="  font-size: 20px;">‘let’ me be a ‘const’(ant), not a ‘var’(iable)</span>
+<div id="content1" class="post-text">Since JavaScript does not have any type-checking,
+     either of these keywords can be used to declare a variable of any type (datatype) in JavaScript.
+      Though all the three keywords are used for the same purpose, they are different. </div></div>
+<i class="fa fa-trash" id="delete" aria-hidden="true"></i>
+<i class="fa fa-ellipsis-h" id="threeDots" aria-hidden="true" onclick="openPost(author1,heading1,content1)" id="dot"></i>
+</div>
+</div>
+
+<!--Delete post1-->
+<div id="modal">
+    <div id="deleteRequest">
+        <div>Are you sure you want to delete this post?</div>
+        <input type="button" id="yes" onclick="removeCard('container')"   value="Yes">
+        <input type="button" id="no" value="No">
+    </div>
+    </div>
+
+<!--post2-->
+<div id="container2">
+    <div id="post2"> 
+        <header id="author2" style=" font-size: 20px;">Colby Fayock</header>
+        <div id="data1"> 
+        <span id="heading2" style="  font-size: 20px;">What is linting and how can it save you time?</span>
+        <div id="content2" class="post-text">One of the biggest challenges in software development is time. 
+        It’s something we can’t easily get more of, but linting can help us make the most out of the time we have.</div></div>
+        <i class="fa fa-trash" id="delete2" aria-hidden="true"></i>
+        <i class="fa fa-ellipsis-h" id="threeDots" aria-hidden="true" onclick="openPost(author2,heading2,content2)" id="dot"></i>
+        </div>
+</div>
+
+<!--Delete post2-->
+<div id="modal2">
+    <div id="deleteRequest2">
+        <div>Are you sure you want to delete this post?</div>
+        <input type="button" id="yes2" onclick="removeCard('container2')" value="Yes">
+        <input type="button" id="no2" value="No">
+    </div>
+    </div>
+
+ <!--post3-->   
+<div id="container3">
+    <div id="post3" style="height: 140px;"> 
+        <header id="author3" style=" font-size: 20px;">Yazeed Bzadough</header>
+        <div id="data1"> 
+        <span id="heading3" style="padding-left: px;  font-size: 20px;">How to Get More Views on Your Tech Blog</span>
+        <div id="content3" class="post-text">If you're a developer with a Twitter account, you've already seen everyone 
+        and their cat start a blog, YouTube channel, or Patreon. We all want to become stars, or at the very least, 
+        a recognizable name in the industry.
+        </div></div>
+        <i class="fa fa-trash" id="delete3" aria-hidden="true"></i>
+        <i class="fa fa-ellipsis-h" id="threeDots" aria-hidden="true" id="dot" onclick="openPost(author3,heading3,content3)"></i>
+        </div>
+</div>
+
+<!--Delete post3-->
+<div id="modal3">
+    <div id="deleteRequest3">
+        <div>Are you sure you want to delete this post?</div>
+        <input type="button" id="yes3" onclick="removeCard('container3')" value="Yes">
+        <input type="button" id="no3" value="No">
+    </div>
+    </div>
+
+ <!--post4-->    
+<div id="container4">
+    <div id="post4"> 
+        <header id="author4" style=" font-size: 20px;">Cedd Burge</header>
+        <div id="data1"> 
+        <span id="heading4" style="padding-left: 0px;  font-size: 20px;">How to write easily describable code</span>
+        <div id="content4"class="post-text">When code is not describable using words, most people have to do some mental mapping to turn it in to words. This wastes mental energy, and you run the risk of getting the mapping wrong. Different people will map to different words, which leads to confusion when discussing the code.
+
+        </div></div>
+        <i class="fa fa-trash" id="delete4" aria-hidden="true"></i>
+        <i class="fa fa-ellipsis-h" id="threeDots" onclick="openPost(author4,heading4,content4)" aria-hidden="true" id="dot"></i>
+        </div>
+</div>
+
+<!--Delete post4-->
+<div id="modal4">
+    <div id="deleteRequest4">
+        <div>Are you sure you want to delete this post?</div>
+        <input type="button" id="yes4" onclick="removeCard('container4')" value="Yes">
+        <input type="button" id="no4" value="No">
+    </div>
+    </div>
+
+<!--post5-->    
+<div id="container5">
+    <div id="post5"> 
+        <header id="author5" style=" font-size: 20px;">Srishti Gupta</header>
+        <div id="data1"> 
+        <span id="heading5" style="padding-left: 0px; font-size: 20px;">Everything you should know about ‘module’ & ‘require’ in Node.js</span>
+        <div id="content5"class="post-text" >Node.js treats each JavaScript file as a separate module. For instance, if you have a file containing some code and this file is named xyz.js, then this file is treated as a module in Node, and you can say that you’ve created a module named xyz.</div></div>
+        <i class="fa fa-trash" id="delete5" aria-hidden="true"></i>
+        <i class="fa fa-ellipsis-h" id="threeDots" style="margin-top: 20px;" onclick="openPost(author5,heading5,content5)"aria-hidden="true" id="dot"></i>
+        </div>
+</div>
+
+<!--Delete post5-->
+<div id="modal5">
+    <div id="deleteRequest5">
+        <div>Are you sure you want to delete this post?</div>
+        <input type="button" id="yes5" onclick="removeCard('container5')" value="Yes">
+        <input type="button" id="no5" value="No">
+    </div>
+    </div>
+
+</body>
+<script src="../scripts/postslist.js"></script>
+<script  src="../scripts/common.js"></script>
+</html>

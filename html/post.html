@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scribbler</title>
+    <link rel="stylesheet" href="./style/common.css">
+    <link rel="stylesheet" href="../style/post.css">
+ 
+   
+    <link href="https://fonts.googleapis.com/css?family=Montez&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+</head>
+<body>
+    <div class="header">
+        <input class="topButtons" id="modalBTN" type="button" value="Sign Up">
+        <input class="topButtons" id="modalBTN2" type="button" value="Sign In">
+        <a id="pageTitle" class="logo-title">ScriBBler</a>
+        <p class="middleText">Explore, Imagine, Create</p>
+    </div> 
+
+   <!--Modul for Sign up-->
+    <div id="simpleModal" class="modal">
+        <div class="modal-content">
+            <span id="closeBtn">&times;</span>
+            <p  id="content">Get started</p>
+            <hr>
+            <form>
+                <label for="">Name</label>
+                <input type="text" placeholder="Enter Your name" id="name" required>
+                <label> Username</label>
+                <input type="text" placeholder="Enter your username" id="username" required>
+                <label> Password</label>
+                <input type="password" placeholder="Enter your password" id="password" required>
+                <label>confirm password</label>
+                <input type="text" placeholder="Enter your username" id="check" required>
+                <button style="position: relative;
+                left: 0%;
+                top: 10%;
+                width: 221%;" onclick="fetchData(name,username,password,check)">Sign Up</button>
+              </form>
+              
+             
+        </div>
+    </div>
+
+    <!--Modul for Sign in-->
+    <div id="simpleModal2" class="modal">
+        <div class="modal-content2">
+            <span id="closeBtn2">&times;</span>
+            <p  id="content">Welcome Back!</p>
+            <hr>
+            <form>
+       
+                <label> Username</label>
+                <input type="text" placeholder="Enter your username" id="username1" required>
+                <label> Password</label>
+                <input type="password" placeholder="Enter your password" id="password1" required>
+                <button style="    position: relative;
+                left: 0%;
+                top: 10%;
+                width: 221%;" onclick="fetchData2(username1,password1)">Sign In</button>
+            </form>
+            
+                <h4>Not a member?</h4>
+                <a href="#simpleModal" id="anchor1">Sign up</a>
+        </div>
+    </div>
+
+<!--This is the content part where all the data will be available about the post-->
+<div class="post-container">
+<div class="heading-content" id="edit-heading" contenteditable="false"></div>
+<div class="author">
+<div class="author-name"></div>
+<div>
+<button style="background-color: rgb(233, 23, 93); width: auto;" id="edit-button" type="button" class="btn btn-danger" onclick="onEdit()">Edit<i
+class="fa fa-edit" style="padding-left: 5px; color:white; background-color: rgb(233, 23, 93);"></i></button>
+</div>
+</div>
+<div class="post-content" id="edit-contenttext" contenteditable="false"></div>
+</div>
+
+<!--Like Section-->
+<div id="likeFormat">
+<i style="color: white;" class='fa fa-thumbs-up' id="thumbs"></i>
+<input type="button" id="likeButton" value="Like">
+<div id="changeTheContent">Be the first one to like this!</div>
+</div>
+
+<!--Comment Section-->
+<div id="commentSection">
+<textarea  id="textArea" placeholder="Leave a comment..." cols="" rows="4px" spellcheck="true"></textarea>
+<br>
+<input type="button" id="commentbutton" value="Comment">
+<h3 style="position: relative;top: 2px;left: 13px">All Comments</h3>
+<div></div>
+ <ul style="list-style-type: none;width: 65%;background: lightgray;position: relative;left: 13px;top: -20px;">
+<li style="position: relative;left: -58px;" id="output"></li>
+</ul>
+</div>
+   
+</body>
+
+<script  src="../scripts/common.js"></script>
+<script src="../scripts/post.js"></script>
+</html>

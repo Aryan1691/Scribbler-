@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scribbler</title>
+    <link rel="stylesheet" href="../style/index.css">
+    <link rel="stylesheet" href="../style/common.css">
+    <link href="https://fonts.googleapis.com/css?family=Montez&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+</head>
+<body>
+    <div class="header">
+        <input class="topButtons" id="modalBTN" type="button" value="Sign Up">
+        <input class="topButtons" id="modalBTN2" type="button" value="Sign In">
+        <a id="pageTitle" class="logo-title">ScriBBler</a>
+        <p class="middleText">Explore, Imagine, Create</p>
+    </div> 
+   <!--Modul for Sign up-->
+    <div id="simpleModal" class="modal">
+        <div class="modal-content">
+            <span id="closeBtn">&times;</span>
+            <p  id="content">Get started</p>
+            <hr>
+            <form>
+                <label for="">Name</label>
+                <input type="text" placeholder="Enter Your name" id="name" required>
+                <label> Username</label>
+                <input type="text" placeholder="Enter your username" id="username" required>
+                <label> Password</label>
+                <input type="password" placeholder="Enter your password" id="password" required>
+                <label>confirm password</label>
+                <input type="text" placeholder="Enter your username" id="check" required>
+                <button style="position: relative;
+                left: 0%;
+                top: 10%;
+                width: 221%;" onclick="fetchData(name,username,password,check)">Sign Up</button>
+              </form>
+              
+             
+        </div>
+    </div>
+    <!--Modul for Sign in-->
+    <div id="simpleModal2" class="modal">
+        <div class="modal-content2">
+            <span id="closeBtn2">&times;</span>
+            <p  id="content">Welcome Back!</p>
+            <hr>
+            <form>
+       
+                <label> Username</label>
+                <input type="text" placeholder="Enter your username" id="username1" required>
+                <label> Password</label>
+                <input type="password" placeholder="Enter your password" id="password1" required>
+                <button style="    position: relative;
+                left: 0%;
+                top: 10%;
+                width: 221%;" onclick="fetchData2(username1,password1)">Sign In</button>
+            </form>
+            
+                <h4>Not a member?</h4>
+                <a href="#simpleModal" id="anchor1">Sign up</a>
+        </div>
+    </div>
+    <!--Modul for create post-->
+    <button id="All">All Posts</button>
+    <button id="Create">Create Post</button>
+
+    <div id="simpleModal3" class="modal">
+        <div class="modal-content3">
+            <span id="closeBtn3">&times;</span>
+            <p id="content">Pen Your Post</p>
+            <hr id="line">
+            <form>
+                <label>Title</label>
+                <input type="text" placeholder="Enter title of your post" id="contentTitle" required>
+                <label>Contents</label>
+                <textarea id="contents" placeholder="Enter the contents of your post" cols="100" rows="18" required></textarea>
+                <button style="margin: 2.5% 60%;width: 100px;padding: 4px;font-size: 100%;position: relative;display: flex;align-items: center;justify-content: center;left: 317%;top: 10%;" onclick="fetchData3(contentTitle,contents)">Create</button>
+
+            </form>
+        </div>
+    </div>
+</body>
+<script src="../scripts/index.js">
+
+</script>
+</html>

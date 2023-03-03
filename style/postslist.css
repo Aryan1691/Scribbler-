@@ -1,0 +1,479 @@
+*{
+   
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+body{
+    overflow: hidden;
+}
+#container{
+    display: block;
+    width: 42%;
+    border-radius: 9px;
+    position: fixed;
+    left: 3%;
+    top: 113px;
+}
+#container2{
+    display: block;
+    width: 42%;
+    border-radius: 9px;
+    position: fixed;
+    left: 51%;
+    top: 7pc;
+}
+#container3{
+    display: block;
+    width: 42%;
+    border-radius: 9px;
+    position: fixed;
+    left: 3%;
+    top: 17pc;
+}
+#container4{
+    display: block;
+    width: 42%;
+    border-radius: 9px;
+    position: fixed;
+    left: 51%;
+    top: 17pc;
+}
+#container5{
+    display: block;
+    width: 42%;
+    border-radius: 9px;
+    position: fixed;
+    left: 28%;
+    top: 27pc;
+}
+
+#post1{
+    width: 583px;
+    background: rgb(247, 244, 244);
+    display: flex;
+    border-radius: 12px 12px 12px 12px;
+    box-shadow: 0 3px 3px 0 rgba(0,0,0,0.2),0 3px 3px 0 rgba(0,0,0,0.2);
+    transition:box-shadow 2s; 
+}
+#post2{
+    width: 583px;
+    background: rgb(247, 244, 244);
+    display: flex;
+    border-radius: 12px 12px 12px 12px;
+    box-shadow: 0 3px 3px 0 rgba(0,0,0,0.2),0 3px 3px 0 rgba(0,0,0,0.2);    transition:box-shadow 2s;
+}
+#post3{
+    width: 583px;
+    background: rgb(247, 244, 244);
+    display: flex;
+    border-radius: 12px 12px 12px 12px;
+    box-shadow: 0 3px 3px 0 rgba(0,0,0,0.2),0 3px 3px 0 rgba(0,0,0,0.2);    transition:box-shadow 2s;
+}
+#post4{
+    width: 583px;
+    background: rgb(247, 244, 244);
+    display: flex;
+    border-radius: 12px 12px 12px 12px;
+    box-shadow: 0 3px 3px 0 rgba(0,0,0,0.2),0 3px 3px 0 rgba(0,0,0,0.2);    transition:box-shadow 2s;
+}
+#post5{
+    width: 583px;
+    background: rgb(247, 244, 244);
+    display: flex;
+    border-radius: 12px 12px 12px 12px;
+    box-shadow: 0 3px 3px 0 rgba(0,0,0,0.2),0 3px 3px 0 rgba(0,0,0,0.2);    transition:box-shadow 2s;  
+}
+header{
+    background: white;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    font-weight: bold;
+    color: grey;
+    border-radius: 12px 0px 0px 12px;
+}
+span{
+    color: rgb(133, 131, 131);
+}
+#data1{
+    font-size: 15px;
+    padding: 11px;
+}
+#delete,#delete2,#delete3,#delete4,#delete5{
+    position: relative;
+    top: 10px;
+    right: 3px;
+    cursor: pointer;
+    color: gray;
+}
+
+#threeDots{
+    position: relative;
+    top: 120px;
+    right: 15px;
+    cursor: pointer;
+    color: grey;
+}
+#modal,#modal2,#modal3,#modal4,#modal5{
+    display: none;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(0,0,0,0.5);
+    top: 0;
+    left: 0;
+    overflow: auto;
+    z-index: 1;
+    animation-name: modal2;
+    animation-duration: 0.5s;
+}
+#deleteRequest,#deleteRequest2,#deleteRequest3,#deleteRequest4,#deleteRequest5{
+    width: 25%;
+    background-color: white;
+    text-align: center;
+    position: relative;
+    left: 38%;
+    top: 35%;
+    height: 70px;
+    padding: 15px;
+    border-radius: 14px;
+}
+
+#container:hover{
+    box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2),0 12px 25px 0 rgba(0,0,0,0.2);
+}
+#container2:hover{
+    box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2),0 12px 25px 0 rgba(0,0,0,0.2);
+}
+#container3:hover{
+    box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2),0 12px 25px 0 rgba(0,0,0,0.2);
+}
+#container4:hover{
+    box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2),0 12px 25px 0 rgba(0,0,0,0.2);
+}
+#container5:hover{
+    box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2),0 12px 25px 0 rgba(0,0,0,0.2);
+
+}
+#yes,#yes2,#yes3,#yes4,#yes5{
+    width: 56px;
+    background-color: rgb(13, 209, 13);
+    float: left;
+    position: relative;
+    top: 20px;
+    right: 1px;
+    color: white;
+    border-radius: 10px;
+}
+#no,#no2,#no3,#no4,#no5{
+    width: 56px;
+    position: relative;
+    top: 21px;
+    left: 109px;
+    background-color: red;
+    color: white;
+    border-radius: 10px;
+}
+@keyframes modal2{
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+
+
+
+
+
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    opacity: 0.9;
+    text-align: center;
+    position: relative;
+    top: -20px;
+    height: 31px;
+    position: relative;
+    top: -98px;
+    height: 37px;
+    width: 306px;
+    left: -123px;
+    border-radius: 5px;
+   
+  
+}
+button:hover {
+ opacity:1;
+}
+input.topButtons {
+ width: 90px;
+ height: 35px;
+ padding: 1px;
+ cursor: pointer;
+ font-weight: 500;
+ font-size: 90%;
+ background: #0000ff;
+ color: #fff;
+ float: right; 
+ border-radius: 10%;  
+ position: relative;   
+ left: 10px;           
+ 
+ margin: 10px 10px 0px 0px;
+ font-family: Arial, Helvetica, sans-serif;
+}
+label{
+    white-space: nowrap;
+
+}
+.logo-title {
+font-family: 'Montez', cursive; 
+font-size: 50px;
+color: #112fb4;
+margin: auto;
+text-decoration: none;
+margin: 10px 10px 0px 10px;    
+}
+h1{
+    text-align: center;
+    font-family: 'Abel', sans-serif;
+}
+.middleText{
+    font-family: 'Marck Script', cursive;
+    margin-top: 0;
+    margin: 0 0 0px 10px;
+    }
+
+    .modal{
+        display: none;
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        background-color: rgb(0,0,0,0.5);
+        top: 0;
+        left: 0;
+        overflow: auto;
+        z-index: 1;
+    }
+  
+    #anchor1{
+        top: 262px;
+        position: absolute;
+        left: 180px;
+        text-decoration: none;
+        color: blue;
+        }
+        h4{
+            position: absolute;
+    top: 240px;
+    left: 52px;
+            }
+.modal-content{
+    background-color: white;
+    max-height: 20vh;
+    margin: 5% auto;
+    position: absolute;
+    top: 0;
+    padding: 11%;
+    box-shadow: 0 5px 8px 0 rgb(0 0 0 / 20%), 0 7px 20px 0 rgb(0 0 0 / 20%);
+    animation-name: modal;
+    animation-duration: 0.5s;
+    border-radius: 10px;
+    width: 2px;
+    left: 39%;
+            
+ }
+            .modal-content2{
+                background-color: white;
+                height: 18px;
+                width: 6px;    
+                margin: 5% auto;
+                position: relative;
+                top: 0;
+                padding: 11%;
+                box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2),0 7px 20px 0 rgba(0,0,0,0.2);
+                animation-name: modal;
+                animation-duration: 0.5s;
+                border-radius: 10px;
+              
+            }
+            #closeBtn,#closeBtn2{
+                float: right;
+                font-size: 30px;
+                cursor: pointer;
+                position: absolute;
+                top: 0;
+                right: 10px;
+             
+            }
+            input{
+                width: 285px;
+                height: 34px;
+                background-color: lightgray;
+                border: none;
+                border-radius: 3px;
+                   
+                }
+                #content{
+                    position: absolute;
+                    font-size: 22px;
+                    color: grey;
+                    top: -13px;
+                    left: 10px;
+                    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                }
+                #contents{
+                    color: black;
+                    background-color: lightgray;
+                    width: 1086px;
+                    border-radius: 6px;
+                }
+                hr{
+                    position: relative;
+                    top: -113px;
+                    width: 286px;
+                    left: -143px;
+                }
+                form{
+                    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: -111px;
+    right: 143px;
+    gap: 11px;
+    width: 129px;
+                }
+
+                label{
+                    width: 100px;
+                }
+        
+        
+        #All{
+            position: relative;
+            top: 188px;
+            left: 547px;
+            width: 93px;
+            padding: 13px;
+            color: black;
+            border-width: 2px;
+            border: groove;
+            width: 111px;
+            border-color: white;
+            padding: 9px;
+           background-color: orange;
+            
+        }
+        #All{
+            position: relative;
+            top: 188px;
+            left: 547px;
+            width: 93px;
+            padding: 13px;
+            color: black;
+            border-width: 2px;
+            border: groove;
+            width: 111px;
+            border-color: white;
+            padding: 9px;
+           background-color: orange;
+            
+        }
+        #Create{
+            position: relative;
+            top: 188px;
+            left: 548px;
+            padding: 13px;
+            background-color: orange;
+            color: black;
+            border-width: 2px;
+            border: groove;
+            width: 111px;
+            border-color: white;
+            padding: 9px;
+        }
+        #contentTitle{
+        width: 1092px;
+        position: relative;
+        left: -3px;
+        }
+        #line{
+            width: 1093px;
+            position: relative;
+            left: -145px;
+        }
+        @keyframes modal{
+            from{opacity: 0;}
+            to{opacity: 1;}
+        }
+
+.post-text{
+overflow: hidden;
+ white-space: normal;
+ height: 4.8em;   
+  font-size: 20px;
+}
+@media (max-width:480px){
+    body{
+        background-color: #ffeedd;
+        width: 172%;
+    }
+    #post1{
+        max-width: 291px;
+        position: fixed;
+        right: 52%;
+        word-wrap: normal;
+        font-size: inherit;
+        white-space: pre-line;
+        top: 127px;
+    }
+    #post2{
+        max-width: 291px;
+        white-space: pre-line;
+        position: fixed;
+        top: 127px;
+    }
+    #post3{
+        position: fixed;
+        right: 52%;
+        word-wrap: normal;
+        font-size: inherit;
+        white-space: pre-line;
+        top: 348px;
+        max-width: 293px;
+        max-height: 20vh;
+        padding-bottom: 49px;
+        overflow: hidden;
+    }
+    #post4{
+        max-width: 291px;
+        position: fixed;
+        top: 27%;
+    }
+    #post5{
+        max-width: 291px;
+        position: fixed;
+        right: 30%;
+        word-wrap: normal;
+        font-size: inherit;
+        white-space: pre-line;
+        top: 548px;
+        overflow: hidden;
+    }
+
+    #container{
+        width: 47%;
+    }
+    #deleteRequest, #deleteRequest2, #deleteRequest3, #deleteRequest4, #deleteRequest5 {
+        width: 52%;
+        background-color: white;
+        text-align: center;
+        position: relative;
+        left: 21%;
+        top: 36%;
+        height: 87px;
+        padding: 15px;
+        border-radius: 14px;}
+}        
