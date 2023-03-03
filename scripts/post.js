@@ -21,7 +21,9 @@ let Output = document.getElementById('output');
 comButton.addEventListener('click',show);
 
 function show(){
-    Output.innerHTML+=`<p id="context">${text.value}<p/>`;
+    const temp =document.getElementById('output').innerHTML;
+    document.getElementById('output').innerHTML=`<p id="context">${text.value}<p/>`;
+    document.getElementById('output').innerHTML+=`${temp}`
 }
 
 let queryString = new Array();
